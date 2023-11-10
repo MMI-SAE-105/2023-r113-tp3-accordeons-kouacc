@@ -8,6 +8,9 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
+    <button @click="accordeonIsOpen = 0">Fermer</button>
+    <button @click="accordeonIsOpen = 1">Ouvrir</button>
+    <button>Ouvrir/Fermer</button>
     <h1 x-show="accordeonIsOpen">Accordéon mémorisant par un nombre l'élèment ouvert</h1>
   </body>
 </html>
