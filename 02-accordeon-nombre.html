@@ -10,7 +10,6 @@
   <body>
     <button @click="accordeonIsOpen = 0">Fermer</button>
     <button @click="accordeonIsOpen = 1">Ouvrir</button>
-    <button>Ouvrir/Fermer</button>
-    <h1 x-show="accordeonIsOpen">Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    <h1 x-show="accordeonIsOpen" x-transition.scale.origin.top.duration.600ms>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
   </body>
 </html>
