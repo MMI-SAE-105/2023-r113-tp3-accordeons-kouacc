@@ -12,15 +12,15 @@
     <div class="accordeon">
       <section>
         <button @click="section1 = ! section1">bouton 1</button>
-        <p x-show="section1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi fugiat quam dolores iusto corrupti nihil ab, expedita, pariatur provident facilis doloribus eos cupiditate optio non, eum saepe magni odio?</p>
+        <p x-show="section1" x-transition.duration.800ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi fugiat quam dolores iusto corrupti nihil ab, expedita, pariatur provident facilis doloribus eos cupiditate optio non, eum saepe magni odio?</p>
       </section>
       <section>
         <button @click="section2 = ! section2">bouton 2</button>
-        <p x-show="section2">Suscipit quos cum tempore, perspiciatis unde a illum sapiente enim! Itaque dolore quasi numquam aperiam optio fugiat harum culpa, delectus voluptatibus dolores, mollitia repudiandae unde quidem corporis eaque a recusandae?</p>
+        <p x-show="section2" x-transition.duration.800ms>Suscipit quos cum tempore, perspiciatis unde a illum sapiente enim! Itaque dolore quasi numquam aperiam optio fugiat harum culpa, delectus voluptatibus dolores, mollitia repudiandae unde quidem corporis eaque a recusandae?</p>
       </section>
       <section>
         <button @click="section3 = ! section3">bouton 3</button>
-        <p x-show="section3">Natus nisi, eius quasi dignissimos neque esse eos hic ab iure ad! Illo commodi dolores quod voluptate. Odio dolorum ratione eos, corrupti, sapiente eaque fugit exercitationem aspernatur facilis ut sequi!</p>
+        <p x-show="section3" x-transition.duration.800ms>Natus nisi, eius quasi dignissimos neque esse eos hic ab iure ad! Illo commodi dolores quod voluptate. Odio dolorum ratione eos, corrupti, sapiente eaque fugit exercitationem aspernatur facilis ut sequi!</p>
       </section>
     </div>
   </body>
