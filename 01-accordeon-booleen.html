@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{section1: false, section2: false, section3: false}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec des booléens</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+    <div class="accordeon">
+      <section>
+        <button @click="section1 = ! section1">bouton 1</button>
+        <p x-show="section1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi fugiat quam dolores iusto corrupti nihil ab, expedita, pariatur provident facilis doloribus eos cupiditate optio non, eum saepe magni odio?</p>
+      </section>
+      <section>
+        <button @click="section2 = ! section2">bouton 2</button>
+        <p x-show="section2">Suscipit quos cum tempore, perspiciatis unde a illum sapiente enim! Itaque dolore quasi numquam aperiam optio fugiat harum culpa, delectus voluptatibus dolores, mollitia repudiandae unde quidem corporis eaque a recusandae?</p>
+      </section>
+      <section>
+        <button @click="section3 = ! section3">bouton 3</button>
+        <p x-show="section3">Natus nisi, eius quasi dignissimos neque esse eos hic ab iure ad! Illo commodi dolores quod voluptate. Odio dolorum ratione eos, corrupti, sapiente eaque fugit exercitationem aspernatur facilis ut sequi!</p>
+      </section>
+    </div>
   </body>
 </html>
