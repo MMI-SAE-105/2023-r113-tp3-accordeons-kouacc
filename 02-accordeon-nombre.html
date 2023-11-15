@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{accordeonIsOpen: 0}">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,8 +8,17 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
-    <button @click="accordeonIsOpen = 0">Fermer</button>
-    <button @click="accordeonIsOpen = 1">Ouvrir</button>
-    <h1 x-show="accordeonIsOpen" x-transition.scale.origin.top.duration.600ms>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    <div  x-data="{accordeonIsOpen: 0}">
+      <button @click="accordeonIsOpen = 1">Ouvrir 1</button>
+      <h1 x-show="accordeonIsOpen ===1" x-transition.scale.origin.top.duration.600ms>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+      <button @click="accordeonIsOpen = 2">Ouvrir 2</button>
+      <h1 x-show="accordeonIsOpen ===2" x-transition.scale.origin.top.duration.600ms>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    </div>
+    <div  x-data="{accordeonIsOpen: 0}">
+      <button @click="accordeonIsOpen = 1">Ouvrir 1</button>
+      <h1 x-show="accordeonIsOpen ===1" x-transition.scale.origin.top.duration.600ms>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+      <button @click="accordeonIsOpen = 2">Ouvrir 2</button>
+      <h1 x-show="accordeonIsOpen ===2" x-transition.scale.origin.top.duration.600ms>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    </div>
   </body>
 </html>
