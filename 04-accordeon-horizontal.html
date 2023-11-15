@@ -10,7 +10,7 @@
       #accordeon {
         justify-content: left;
         margin: 0;
-        padding: 0;
+        padding: 0;    
       }
       #accordeon li {
         background-color: #eee;
@@ -20,10 +20,10 @@
         margin: 5px;
         list-style-type: none;
         height: 107px;
-        transition: width 0.5s ease-in-out;
+        transition: height 0.5s ease-in-out;
       }
       #accordeon li.actif {
-        width: 317px
+        height: 317px
       }
       #accordeon li figure {
         margin: 0;
@@ -45,8 +45,8 @@
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
-    <ul id="accordeon">
-      <li>
+    <ul id="accordeon" x-data="{isOpen: 0}">
+      <li :class="{actif:isOpen === 1,}" @click="isOpen = 1">
         <figure>
           <img src="https://picsum.photos/100?random=1" alt="" width="102">
           <figcaption>
@@ -55,7 +55,7 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li :class="{actif:isOpen === 2,}" @click="isOpen = 2">
         <figure>
           <img src="https://picsum.photos/100?random=2" alt="" width="102">
           <figcaption>
@@ -64,7 +64,7 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li :class="{actif:isOpen === 3,}" @click="isOpen = 3">
         <figure>
           <img src="https://picsum.photos/100?random=3" alt="" width="102">
           <figcaption>
