@@ -7,13 +7,16 @@
     <title>Onglets</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-      [role="tabpanel"] {
+      div {
         position: relative;
         width: 300px;
         height: 100px;
       }
-      [role="tabpanel"] > * {
+      [role="tabpanel"] {
         position: absolute;
+        opacity: 0;
+      }
+      [role="tabpanel"].actif {
         opacity: 1;
       }
     </style>
@@ -29,15 +32,15 @@
       <li role="tab" @click="ouvert = 3">Onglet 3</li>
     </ul>
     <div>
-      <div role="tabpanel" x-show="ouvert === 1">
+      <div role="tabpanel" x-show="ouvert === 1" :class="{actif:ouvert === 1,}">
         <h1>Panneau 1</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate voluptates officiis aspernatur maxime hic nulla porro ad molestiae error veritatis eaque accusamus nesciunt nihil non repudiandae modi, iste ipsam suscipit.</p>
       </div>
-      <div role="tabpanel" x-show="ouvert === 2">
+      <div role="tabpanel" x-show="ouvert ===  2" :class="{actif:ouvert === 2,}">
         <h1>Panneau 2</h1>
         <p>Voluptatem perspiciatis nisi numquam molestiae voluptates culpa nam, quis rem provident exercitationem rerum corporis deleniti quas aspernatur laudantium nostrum enim! Quia omnis sit incidunt velit quo animi voluptatibus! Consectetur, dicta.</p>
       </div>
-      <div role="tabpanel" x-show="ouvert === 3">
+      <div role="tabpanel" x-show="ouvert === 3" :class="{actif:ouvert === 3,}">
         <h1>Panneau 3</h1>
         <p>Officia, velit perferendis eum tenetur veniam labore accusamus dicta laboriosam optio, beatae vel maxime provident architecto minus asperiores, totam magnam culpa commodi aut rem sunt quia. Consequuntur quis dolorum nemo?</p>
       </div>
